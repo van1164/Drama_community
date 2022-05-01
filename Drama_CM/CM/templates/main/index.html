@@ -126,12 +126,6 @@
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
 
-            <!-- Sidebar Message -->
-            <div class="sidebar-card d-none d-lg-flex">
-                <img class="sidebar-card-illustration mb-2" src={%static "/img/undraw_rocket.svg"%} alt="...">
-                <p class="text-center mb-2"><strong>SB Admin Pro</strong> is packed with premium features, components, and more!</p>
-                <a class="btn btn-success btn-sm" href="https://startbootstrap.com/theme/sb-admin-pro">Upgrade to Pro!</a>
-            </div>
 
         </ul>
         <!-- End of Sidebar -->
@@ -305,7 +299,9 @@
                     </div>
 
                     {%endif%}
-                    
+                    {%if login==False%}
+                    <div class="h5 mb-0 font-weight-bold text-gray-800">로그인이 필요한 서비스입니다.</div>
+                    {%else%}
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">추천 드라마</h1>
@@ -355,7 +351,7 @@
                                 </div>
                             </div>
 
-
+                            {%endif%}
 </body>
 
 </html>
