@@ -37,7 +37,7 @@ def login(request):
 
 
 def create_vote(request):
-    data ={
+    data =[{
     'category': '김시환',
     'profileImgUrl': 'https://placeimg.com/200/100/people/grayscale',
     'userName': '김시환',
@@ -46,6 +46,18 @@ def create_vote(request):
     'voteImgUrl': 'https://placeimg.com/200/100/tech/grayscale',
     'heartCount': 48,
     'date': '7시간전',
-    }
+    },
+     {
+    'category': '이윤우',
+    'profileImgUrl': 'https://placeimg.com/200/100/people/grayscale',
+    'userName': '이윤우',
+    'vote': '예민한 개는 무섭다ㅠㅠ?\n'
+        '걱정이 돼요 ㅜㅜ.',
+    'voteImgUrl': 'https://placeimg.com/200/100/tech/grayscale',
+    'heartCount': 514,
+    'date': '1시간전',
+    },      
+           
+           ]
     print("vote!!")
     return JsonResponse(data)
