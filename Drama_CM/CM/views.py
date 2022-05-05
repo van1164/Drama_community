@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Account,DRAMA
+from django.http import JsonResponse
 # Create your views here.
 
 def main(request):
@@ -33,3 +34,18 @@ def index(request):
 
 def login(request):
     return render(request, 'main/login.html',{})
+
+
+def create_vote(request):
+    data ={
+    'category': '김시환',
+    'profileImgUrl': 'https://placeimg.com/200/100/people/grayscale',
+    'userName': '김시환',
+    'vote': '예민한 개도 미용할 수 있는 곳이나 동물 병원 어디 있을까요?\n'
+        '내일 유기견을 데려오기로 했는데 아직 성향을 잘 몰라서 걱정이 돼요 ㅜㅜ.',
+    'voteImgUrl': 'https://placeimg.com/200/100/tech/grayscale',
+    'heartCount': 48,
+    'date': '7시간전',
+    }
+    print("vote!!")
+    return JsonResponse(data)
