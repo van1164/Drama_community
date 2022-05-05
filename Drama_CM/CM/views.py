@@ -60,4 +60,4 @@ def create_vote(request):
            
            ]
     print("vote!!")
-    return JsonResponse(data)
+    return JsonResponse(data,safe=False)
